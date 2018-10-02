@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6" >
+      <h1>Form Data Mahasiswa</h1><hr>
+      <label for="nim">Nim</label>
+      <input type="text" class="form-control" [(ngModel)]="nim"><br>
+      <label for="nama">Nama</label>
+      <input type="text" class="form-control" [(ngModel)]="nama"><br>
+      <label for="kelas">Kelas</label>
+      <input type="text" class="form-control" [(ngModel)]="kelas"><br>
+      <button class="btn btn-primary" style="width: 100%;" (click)='tambahMahasiswanya()'>
+        Tambah
+      </button>
+    </div>
+    <div class="col-md-6">
+        <h1>Data Mahasiswa</h1><hr>  
+        <div *ngFor="let isi of arrayMahasiswa">
+            <div class="card" style="margin-bottom: 15px">
+                <div class="card-header">
+                  <h2>{{isi.nama}}</h2>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{isi.nim}}</h5>
+                  <p class="card-text">{{isi.kelas}}</p>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>

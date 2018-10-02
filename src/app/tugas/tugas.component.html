@@ -1,0 +1,15 @@
+<Label>Iki Program</Label>
+<input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="username">
+<p>Output : {{ username }}</p>
+<!-- ini simple -->
+<!-- <button 
+  class="btn btn-primary" 
+  [disabled]="username===''">Tombol</button> -->
+  <!-- ini rumit -->
+  <button 
+  class="btn btn-primary" 
+  [disabled]="checkUsername()"
+  (click)="reset()">Reset</button>

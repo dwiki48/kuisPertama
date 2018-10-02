@@ -1,0 +1,10 @@
+<button 
+class="btn btn-primary" 
+(click)="onCreationStatus()">Tampilkan Detail</button><br><br>
+<p *ngIf="serverCreated">{{ serverNama }}</p>
+<p *ngFor = "let i of log"
+[ngStyle]="{backgroundColor: i>4 ? 'blue' : 'white'}"
+[ngClass]="{angka: i>4}"
+>
+{{i}}</p>
+
